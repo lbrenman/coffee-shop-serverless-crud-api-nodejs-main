@@ -12,7 +12,10 @@ module.exports.handler = async () => {
     const result = await dynamoDb.scan(params).promise();
     return {
       statusCode: 200,
-      body: JSON.stringify(result.Items)
+      body: JSON.stringify({
+        orders: result.Items,
+        status: "OK"
+      })
     };
   } catch (error) {
     return {

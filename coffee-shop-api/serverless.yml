@@ -27,7 +27,6 @@ functions:
       - http:
           path: coffee
           method: post
-          private: true
   
   getCoffee:
     handler: getCoffee.handler

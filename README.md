@@ -1,6 +1,7 @@
-AutoNode Serverless: Automating Deployment of a Serverless CRUD REST API with Node.js
-=====================================================================================
+# Coffee API
 
-My version of this excellent [**blog post**](https://www.freecodecamp.org/news/how-to-build-a-serverless-crud-rest-api/) by Ifeanyi Otuonye
+[Serverless](https://serverless.com/) CRUD REST API to DynamoDB using the Serverless Framework for AWS, Node.js lambda, and GitHub Actions for DevOps.
 
-If I improve on it, I'll add more comments but for now it's flawless!
+Based on an excellent [**blog post**](https://www.freecodecamp.org/news/how-to-build-a-serverless-crud-rest-api/) by Ifeanyi Otuonye.
+
+I added API Key Auth to the APIs.

@@ -9,7 +9,7 @@ provider:
   apiGateway:
     apiKeys:
       - ${opt:stage}-coffeeKey
-  tags:
+  #tags:
     #SHOULD_DISCOVER: 1
   httpApi:
     useProviderTags: false

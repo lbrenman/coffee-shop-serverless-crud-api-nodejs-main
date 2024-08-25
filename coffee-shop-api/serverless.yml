@@ -9,10 +9,10 @@ provider:
   apiGateway:
     apiKeys:
       - ${opt:stage}-coffeeKey
-  #tags:
-    #SHOULD_DISCOVER: 1
+  tags:
+    SHOULD_DISCOVER: 1
   httpApi:
-    useProviderTags: false
+    useProviderTags: true
   iam:
     role:
       statements:

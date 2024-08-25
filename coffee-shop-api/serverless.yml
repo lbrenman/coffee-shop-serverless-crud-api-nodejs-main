@@ -8,10 +8,7 @@ provider:
   stage: ${opt:stage}
   apiGateway:
     apiKeys:
-      - coffeeKey
       - ${opt:stage}-coffeeKey
-      # you can hide it in a serverless variable
-      - ${env:COFFEE_API_KEY}
   iam:
     role:
       statements:

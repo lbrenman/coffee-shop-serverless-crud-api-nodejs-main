@@ -6,6 +6,12 @@ provider:
   runtime: nodejs20.x
   region: us-east-1
   stage: ${opt:stage}
+  apiGateway:
+    apiKeys:
+      - coffeeKey
+      - ${opt:stage}-coffeeKey
+      # you can hide it in a serverless variable
+      - ${env:COFFEE_API_KEY}
   iam:
     role:
       statements:
@@ -27,6 +33,7 @@ functions:
       - http:
           path: coffee
           method: post
+          private: true
   
   getCoffee:
     handler: getCoffee.handler
@@ -36,6 +43,7 @@ functions:
       - http:
           path: coffee
           method: get
+          private: true
   
   updateCoffee:
     handler: updateCoffee.handler
@@ -45,6 +53,7 @@ functions:
       - http:  
           path: coffee  
           method: put  
+          private: true
   
   deleteCoffee:  
     handler: deleteCoffee.handler
@@ -54,6 +63,7 @@ functions:
       - http:
           path: coffee
           method: delete
+          private: true
 resources:
   Resources:
     CoffeeTable:

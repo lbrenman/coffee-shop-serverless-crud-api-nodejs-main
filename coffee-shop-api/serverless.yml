@@ -21,6 +21,12 @@ provider:
             - dynamodb:DeleteItem
           Resource: arn:aws:dynamodb:${self:provider.region}:*:table/CoffeeOrders-${self:provider.stage}
 
+plugins: 
+  - api-gateway-stage-tag-plugin
+
+apiStageTags:
+    SHOULD_DISCOVER: 1
+
 functions:
   createCoffee:
     handler: createCoffee.handler

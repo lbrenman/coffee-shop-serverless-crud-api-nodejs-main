@@ -30,7 +30,7 @@ functions:
       - http:
           path: coffee
           method: post
-          private: true
+          private: false
   
   getCoffee:
     handler: getCoffee.handler
@@ -40,7 +40,7 @@ functions:
       - http:
           path: coffee
           method: get
-          private: true
+          private: false
   
   updateCoffee:
     handler: updateCoffee.handler
@@ -50,7 +50,7 @@ functions:
       - http:  
           path: coffee  
           method: put  
-          private: true
+          private: false
   
   deleteCoffee:  
     handler: deleteCoffee.handler
@@ -60,7 +60,7 @@ functions:
       - http:
           path: coffee
           method: delete
-          private: true
+          private: false
 resources:
   Resources:
     CoffeeTable:

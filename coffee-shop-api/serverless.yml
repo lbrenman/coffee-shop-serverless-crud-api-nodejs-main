@@ -8,7 +8,7 @@ provider:
   stage: ${opt:stage}
   apiGateway:
     apiKeys:
-      - ${opt:stage}-coffeeKey
+      #- ${opt:stage}-coffeeKey
   iam:
     role:
       statements:

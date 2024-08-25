@@ -9,6 +9,10 @@ provider:
   apiGateway:
     apiKeys:
       - ${opt:stage}-coffeeKey
+  tags:
+    SHOULD_DISCOVER: 1
+  httpApi:
+    useProviderTags: true
   iam:
     role:
       statements:
@@ -20,12 +24,6 @@ provider:
             - dynamodb:UpdateItem
             - dynamodb:DeleteItem
           Resource: arn:aws:dynamodb:${self:provider.region}:*:table/CoffeeOrders-${self:provider.stage}
-
-#plugins: 
-#  - api-gateway-stage-tag-plugin
-
-apiStageTags:
-    SHOULD_DISCOVER: 1
 
 functions:
   createCoffee:

@@ -8,7 +8,7 @@ provider:
   stage: ${opt:stage}
   apiGateway:
     apiKeys:
-      #- ${opt:stage}-coffeeKey
+      - ${opt:stage}-coffeeKey
   iam:
     role:
       statements:
@@ -30,7 +30,7 @@ functions:
       - http:
           path: coffee
           method: post
-          private: false
+          private: true
   
   getCoffee:
     handler: getCoffee.handler
@@ -40,7 +40,7 @@ functions:
       - http:
           path: coffee
           method: get
-          private: false
+          private: true
   
   updateCoffee:
     handler: updateCoffee.handler
@@ -50,7 +50,7 @@ functions:
       - http:  
           path: coffee  
           method: put  
-          private: false
+          private: true
   
   deleteCoffee:  
     handler: deleteCoffee.handler
@@ -60,7 +60,7 @@ functions:
       - http:
           path: coffee
           method: delete
-          private: false
+          private: true
 resources:
   Resources:
     CoffeeTable:

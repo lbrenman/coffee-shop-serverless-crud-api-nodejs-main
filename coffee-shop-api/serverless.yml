@@ -12,7 +12,7 @@ provider:
   tags:
     SHOULD_DISCOVER: 1
   httpApi:
-    useProviderTags: true
+    useProviderTags: false
   iam:
     role:
       statements:

@@ -10,7 +10,7 @@ provider:
     apiKeys:
       - ${opt:stage}-coffeeKey
   tags:
-    SHOULD_DISCOVER: 1
+    SHOULD_DISCOVER: false
   httpApi:
     useProviderTags: true
   iam:

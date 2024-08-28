@@ -5,3 +5,5 @@
 Based on an excellent [**blog post**](https://www.freecodecamp.org/news/how-to-build-a-serverless-crud-rest-api/) by Ifeanyi Otuonye.
 
 I added API Key Auth to the APIs.
+
+I added SHOULD_DISCOVER=true tags to the stage for Axway Agent Discovery
